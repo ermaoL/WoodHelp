@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.back-icon {
+    width: 11px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#ffffff; }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ffffff; }
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ffffff; }
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#ffffff; }
+
+/* 登录 */
+
+.login {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.logo {
+    width: 145px;
+    height: 50px;
+    margin: 30px auto 40px auto;
+}
+
+.lr-input {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    background: url("../images/input3@2x.png") no-repeat;
+    background-size: 100% 50px;
+
+}
+
+.lr-icon {
+    width: 18px;
+    height: 26px;
+    margin: 10px 5px 10px 25px;
+}
+
+.lr-input > input {
+    position: absolute;
+    left: 45px;
+    margin: 0;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+
+}
+
+.log-submit {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: url("../images/button5@2x.png") no-repeat;
+    background-size: 100% 50px;
+    color: #ec8a37;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.log-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+}
+
+.log-jump-icon {
+    width: 16px;
+    height: 16px;
+    margin-bottom: -2px;
+}
+
+.forget-pwd-jump {
+    position: relative;
+    left: 10%;
+    display: inline;
+}
+
+.register-jump {
+    display: inline;
+    position: relative;
+    left: 45%;
+}
+
+.forget-pwd-jump, .register-jump > span {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* 注册 */
+.register {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.valid-btn {
+    position: absolute;
+    right: 8px;
+    height: 36px;
+    margin-top: 7px;
+    color: #f19329;
+    background: url("../images/button10@2x.png");
+    background-size: 100% 36px;
+    border: none;
+}
