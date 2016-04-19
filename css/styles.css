@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.my-icon {
+    background: url("../images/home@2x.png");
+}
+
 .title {
     color: #ffffff;
     font-size: 18px;
@@ -13,6 +17,7 @@
     width: 11px;
     height: 20px;
     margin-left: 10px;
+    margin-top: 10px
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */

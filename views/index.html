@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="ionicApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
@@ -8,44 +8,16 @@
     <title>WoodHelp</title>
 
     <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/ionic.min.css">
 </head>
 <body>
 
-    <div>
-        <div class="mui-content" ng-view>
+<ion-nav-view></ion-nav-view>
 
-        </div>
-        <nav class="mui-bar mui-bar-tab">
-            <a class="mui-tab-item mui-active" href="#/homePage">
-                <span class="mui-icon mui-icon-home"></span>
-                <span class="mui-tab-label">首页</span>
-            </a>
-            <a class="mui-tab-item" href="#/latestSupply">
-                <span class="mui-icon mui-icon-email"></span>
-                <span class="mui-tab-label">最新货源</span>
-            </a>
-            <a class="mui-tab-item" href="#">
-                <span class="mui-icon mui-icon-contact"></span>
-                <span class="mui-tab-label">最新采购</span>
-            </a>
-            <a class="mui-tab-item" href="#">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">购物车</span>
-            </a>
-            <a class="mui-tab-item" href="#">
-                <span class="mui-icon mui-icon-gear"></span>
-                <span class="mui-tab-label">我的</span>
-            </a>
-        </nav>
-    </div>
-
-    <script src="../js/vendors/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/vendors/angular.js"></script>
-    <script type="text/javascript" src="../js/vendors/angular-route.js"></script>
-    <script src="../js/vendors/mui.min.js"></script>
-    <script src="../js/vendors/mustache.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/controllers/homeCtrl.js"></script>
-    <script src="../js/controllers/supplyCtrl.js"></script>
+<script src="../js/vendors/jquery-2.2.1.min.js"></script>
+<script src="../js/vendors/mui.min.js"></script>
+<script src="../js/vendors/ionic.bundle.min.js"></script>
+<script src="../js/vendors/mustache.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
