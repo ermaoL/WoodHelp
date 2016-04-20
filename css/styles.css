@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-.my-icon {
-    background: url("../images/home@2x.png");
+body {
+    overflow: hidden;
 }
 
 .title {
@@ -17,7 +17,6 @@
     width: 11px;
     height: 20px;
     margin-left: 10px;
-    margin-top: 10px
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -132,3 +131,162 @@
     background-size: 100% 36px;
     border: none;
 }
+
+/* 底部导航栏 */
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid lightgray;
+}
+
+.bottom-nav > div {
+    display: inline;
+    width: 20%;
+    height: 50px;
+    float: left;
+    position: relative;
+}
+
+.nav-icon {
+    position: absolute;
+    top: 5px;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+}
+
+.nav-name {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    font-size: 12px;
+    color: #313131;
+}
+
+/* 首页 */
+.home-header {
+    height: 50px;
+    background: #e98c06;
+    position: relative;
+}
+
+.city {
+    display: inline;
+    width: 20%;
+    text-align: center;
+    margin-top: 13px;
+    float: left;
+}
+
+.city-name {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.city > img {
+    width: 10px;
+    height: 6px;
+}
+
+.home-search {
+    display: inline;
+    width: 60%;
+    height: 35px;
+    position: relative;
+    margin-top: 7px;
+    float: left;
+    background: url("../images/searchbj@2x.png") no-repeat;
+    background-size: 100% 35px;
+}
+
+.home-search > input {
+    position: absolute;
+    left: 25px;
+    margin: 0;
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
+
+#home-search {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 8px;
+    top: 7px;
+}
+
+.customer {
+    display: inline;
+    width: 20%;
+    height: 50px;
+    float: left;
+    position: relative;
+}
+
+.customer > img {
+    width: 35px;
+    height: 28px;
+    position: absolute;
+    top: 11px;
+    left: 0%;
+    right: 0%;
+    margin: 0 auto;
+}
+
+.home-mid {
+    display: inline;
+    float: left;
+    width: 25%;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    border-bottom: 1px solid lightgray;
+}
+
+.home-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 0%;
+    right: 0%;
+    margin: 0 auto;
+}
+
+.home-func-name {
+    font-size: 12px;
+    color: #313131;
+    position: absolute;
+    top: 72px;
+    left: 0%;
+    right: 0%;
+    margin: 0 auto;
+}
+
+.home-list {
+    width: 100%;
+    margin-top: 110px;
+    background: #ffffff;
+    border-top: 1px solid lightgray;
+    height: 300px;
+}
+
+.home-slider-pic {
+    width: 100%;
+    height: 150px;
+}
+

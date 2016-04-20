@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ionicApp">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
@@ -8,16 +8,57 @@
     <title>WoodHelp</title>
 
     <link rel="stylesheet" href="../css/mui.min.css">
-    <link rel="stylesheet" href="../css/ionic.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-<ion-nav-view></ion-nav-view>
+    <div>
+        <div ui-view>
 
-<script src="../js/vendors/jquery-2.2.1.min.js"></script>
-<script src="../js/vendors/mui.min.js"></script>
-<script src="../js/vendors/ionic.bundle.min.js"></script>
-<script src="../js/vendors/mustache.min.js"></script>
-<script src="../js/main.js"></script>
+        </div>
+<div class="bottom-nav">
+    <div>
+        <a id="bottom-home" ui-sref="homePage">
+            <img class="nav-icon" src="../images/home@2x.png"/>
+            <div class="nav-name">首页</div>
+        </a>
+    </div>
+    <div>
+        <a id="bottom-supply" ui-sref="latestSupply">
+            <img class="nav-icon" src="../images/Supply@2x.png"/>
+            <div class="nav-name">最新货源</div>
+        </a>
+    </div>
+    <div>
+        <a id="bottom-buy" ui-sref="newestBuy">
+            <img class="nav-icon" src="../images/purchase@2x.png"/>
+            <div class="nav-name">最新采购</div>
+        </a>
+    </div>
+    <div>
+        <a id="bottom-shop" ui-sref="shopCar">
+            <img class="nav-icon" src="../images/Cart@2x.png"/>
+            <div class="nav-name">购物车</div>
+        </a>
+    </div>
+    <div>
+        <a id="bottom-mine" ui-sref="mine">
+            <img class="nav-icon" src="../images/user@2x.png"/>
+            <div class="nav-name">我的</div>
+        </a>
+    </div>
+
+</div>
+    </div>
+
+    <script src="../js/vendors/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular-ui-router.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/vendors/mui.min.js"></script>
+    <script src="../js/vendors/mustache.min.js"></script>
+    <script src="../js/controllers/homeCtrl.js"></script>
+    <script src="../js/controllers/supplyCtrl.js"></script>
+
 </body>
 </html>
