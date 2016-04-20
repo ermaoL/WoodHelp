@@ -57,8 +57,76 @@
     <script src="../js/main.js"></script>
     <script src="../js/vendors/mui.min.js"></script>
     <script src="../js/vendors/mustache.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=5e255c570198b9877b9c54fb76424c15&plugin=AMap.CitySearch"></script>
+    <!--<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
     <script src="../js/controllers/homeCtrl.js"></script>
     <script src="../js/controllers/supplyCtrl.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bottom-home").children("img").attr("src","../images/home1@2x.png");
+            $("#bottom-home").children("div").css("color","#e98c06");
+        });
+        $("#bottom-home").click(function () {
+            $("#bottom-home").children("img").attr("src","../images/home1@2x.png");
+            $("#bottom-home").children("div").css("color","#e98c06");
+            $("#bottom-supply").children("img").attr("src","../images/Supply@2x.png");
+            $("#bottom-supply").children("div").css("color","#313131");
+            $("#bottom-buy").children("img").attr("src","../images/purchase@2x.png");
+            $("#bottom-buy").children("div").css("color","#313131");
+            $("#bottom-shop").children("img").attr("src","../images/Cart@2x.png");
+            $("#bottom-shop").children("div").css("color","#313131");
+            $("#bottom-mine").children("img").attr("src","../images/user@2x.png");
+            $("#bottom-mine").children("div").css("color","#313131");
+        });
+        $("#bottom-supply").click(function () {
+            $("#bottom-home").children("img").attr("src","../images/home@2x.png");
+            $("#bottom-home").children("div").css("color","#313131");
+            $("#bottom-supply").children("img").attr("src","../images/Supply1@2x.png");
+            $("#bottom-supply").children("div").css("color","#e98c06");
+            $("#bottom-buy").children("img").attr("src","../images/purchase@2x.png");
+            $("#bottom-buy").children("div").css("color","#313131");
+            $("#bottom-shop").children("img").attr("src","../images/Cart@2x.png");
+            $("#bottom-shop").children("div").css("color","#313131");
+            $("#bottom-mine").children("img").attr("src","../images/user@2x.png");
+            $("#bottom-mine").children("div").css("color","#313131");
+        });
+        $("#bottom-buy").click(function () {
+            $("#bottom-home").children("img").attr("src","../images/home@2x.png");
+            $("#bottom-home").children("div").css("color","#313131");
+            $("#bottom-supply").children("img").attr("src","../images/Supply@2x.png");
+            $("#bottom-supply").children("div").css("color","#313131");
+            $("#bottom-buy").children("img").attr("src","../images/purchase1@2x_1.png");
+            $("#bottom-buy").children("div").css("color","#e98c06");
+            $("#bottom-shop").children("img").attr("src","../images/Cart@2x.png");
+            $("#bottom-shop").children("div").css("color","#313131");
+            $("#bottom-mine").children("img").attr("src","../images/user@2x.png");
+            $("#bottom-mine").children("div").css("color","#313131");
+        });
+        $("#bottom-shop").click(function () {
+            $("#bottom-home").children("img").attr("src","../images/home@2x.png");
+            $("#bottom-home").children("div").css("color","#313131");
+            $("#bottom-supply").children("img").attr("src","../images/Supply@2x.png");
+            $("#bottom-supply").children("div").css("color","#313131");
+            $("#bottom-buy").children("img").attr("src","../images/purchase@2x.png");
+            $("#bottom-buy").children("div").css("color","#313131");
+            $("#bottom-shop").children("img").attr("src","../images/Cart1@2x.png");
+            $("#bottom-shop").children("div").css("color","#e98c06");
+            $("#bottom-mine").children("img").attr("src","../images/user@2x.png");
+            $("#bottom-mine").children("div").css("color","#313131");
+        });
+        $("#bottom-mine").click(function () {
+            $("#bottom-home").children("img").attr("src","../images/home@2x.png");
+            $("#bottom-home").children("div").css("color","#313131");
+            $("#bottom-supply").children("img").attr("src","../images/Supply@2x.png");
+            $("#bottom-supply").children("div").css("color","#313131");
+            $("#bottom-buy").children("img").attr("src","../images/purchase@2x.png");
+            $("#bottom-buy").children("div").css("color","#313131");
+            $("#bottom-shop").children("img").attr("src","../images/Cart@2x.png");
+            $("#bottom-shop").children("div").css("color","#313131");
+            $("#bottom-mine").children("img").attr("src","../images/user1@2x.png");
+            $("#bottom-mine").children("div").css("color","#e98c06");
+        });
+    </script>
 
 </body>
 </html>
