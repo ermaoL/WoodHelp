@@ -14,7 +14,7 @@
 
 <body>
 <!--下拉刷新容器-->
-<div id="pullrefresh1" class="mui-content mui-scroll-wrapper">
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
     <div class="mui-scroll">
         <!--数据列表-->
         <ul class="mui-table-view mui-table-view-chevron">
@@ -26,10 +26,10 @@
 <script src="../../js/vendors/mui.min.js"></script>
 <script>
 
-    $('#pullrefresh1').css("height", $(window).height());
+    $('#pullrefresh').css("height", $(window).height());
     mui.init({
         pullRefresh: {
-            container: '#pullrefresh1',
+            container: '#pullrefresh',
             down: {
                 callback: pulldownRefresh
             },
@@ -39,7 +39,7 @@
             }
         }
     });
-    var list = {"supply": [{"pic":"../../images/shuijiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+    var list = {"supply": [{"pic":"../../images/shuijiao.jpg", "title":"111全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
         {"pic":"../../images/muwu.jpg", "title":"全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
         {"pic":"../../images/cbd.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
         {"pic":"../../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
@@ -69,7 +69,7 @@
      */
     function pullupRefresh() {
         setTimeout(function() {
-            mui('#pullrefresh1').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
             var table = document.body.querySelector('.mui-table-view');
             var data = list.supply;
             for (var i = 0; i < data.length; i++) {
@@ -83,13 +83,13 @@
     if (mui.os.plus) {
         mui.plusReady(function() {
             setTimeout(function() {
-                mui('#pullrefresh1').pullRefresh().pullupLoading();
+                mui('#pullrefresh').pullRefresh().pullupLoading();
             }, 1000);
 
         });
     } else {
         mui.ready(function() {
-            mui('#pullrefresh1').pullRefresh().pullupLoading();
+            mui('#pullrefresh').pullRefresh().pullupLoading();
         });
     }
 </script>

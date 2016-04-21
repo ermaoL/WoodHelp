@@ -7,20 +7,50 @@
         <div class="supply-header-search">搜索</div>
     </header>
     <div class="select">
-        <div id="supply-type-name" class="select-item">
+        <a href="#middlePopover" id="supply-type-name" class="select-item">
             <span class="select-name">品名</span>
             <img src="../images/lower@2x.png"/>
-        </div>
-        <div id="supply-city-name" class="select-item">
+        </a>
+        <a id="supply-city-name" class="select-item">
             <span class="select-name">城市</span>
             <img src="../images/lower@2x.png"/>
-        </div>
-        <div id="supply-sort" class="select-item">
+        </a>
+        <a id="supply-sort" class="select-item">
             <span class="select-name">排序</span>
             <img src="../images/lower@2x.png"/>
-        </div>
+        </a>
     </div>
     <div class="mui-content" id="supply-list"></div>
+    <div id="middlePopover" class="mui-popover">
+        <div class="mui-popover-arrow"></div>
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell"><a href="#">Item1</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item2</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item3</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item4</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item5</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item6</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item7</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item8</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item9</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item10</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
     <!--<ul id="supply-list">
         <li class="supply-item" ng-repeat="item in supplyList">
             <div class="supply-item-pic">

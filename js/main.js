@@ -17,20 +17,19 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: "tabs/home-page.html",
             controller: "homeCtrl"
         })
-        .state('state1.list', {
-            url: "/list",
-            templateUrl: "partials/state1.list.html",
-            controller: function($scope) {
-                $scope.items = ["A", "List", "Of", "Items"];
-            }
-        })
         .state('latestSupply', {
             url: "/latestSupply",
-            templateUrl: "tabs/latest-supply.html"
+            templateUrl: "tabs/latest-supply.html",
+            controller: "supplyCtrl"
+        })
+        .state('latestSupply.list', {
+            url: "/list",
+            templateUrl: "tabs/supply-list.html"
         })
         .state('newestBuy', {
             url: "/newestBuy",
-            templateUrl: "tabs/newest-buy.html"
+            templateUrl: "tabs/newest-buy.html",
+            controller: "buyCtrl"
         })
         .state('shopCar', {
             url: "/shopCar",

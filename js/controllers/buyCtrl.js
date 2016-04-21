@@ -1,8 +1,7 @@
 /**
- * Created by Administrator on 2016/4/18.
+ * Created by Administrator on 2016/4/21.
  */
-
-function supplyCtrl($scope) {
+function buyCtrl($scope) {
 
     //启用双击监听
     mui.init({
@@ -10,8 +9,8 @@ function supplyCtrl($scope) {
             doubletap:true
         },
         subpages:[{
-            url:'tabs/supply-list.html',
-            id:'supply-list.html',
+            url:'tabs/buy-list.html',
+            id:'buy-list.html',
             styles:{
                 top: '100px',
                 bottom: '50px',
