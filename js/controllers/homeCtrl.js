@@ -23,13 +23,13 @@ function homeCtrl($scope) {
                 if (cityinfo.length > 2) {
                     cityinfo = cityinfo.substring(0, 2) + "…";
                 }
-                $("#cityName").text(cityinfo);
+                document.getElementById('cityName').innerHTML = cityinfo;
 
                 //地图显示当前城市
                 // map.setBounds(citybounds);
             }
         } else {
-            $("#cityName").text("未定位");
+            document.getElementById('cityName').innerHTML = "未定位";
             // document.getElementById('tip').innerHTML = result.info;
         }
     });

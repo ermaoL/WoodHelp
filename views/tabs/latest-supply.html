@@ -1,3 +1,38 @@
 <div ng-controller="supplyCtrl">
-    this is latest supply.
+    <header class="home-header">
+        <div class="supply-search">
+            <img id="supply-search" src="../images/search@2x.png"/>
+            <input type="text" placeholder="请输入您要找的木材"/>
+        </div>
+        <div class="supply-header-search">搜索</div>
+    </header>
+    <div class="select">
+        <div id="supply-type-name" class="select-item">
+            <span class="select-name">品名</span>
+            <img src="../images/lower@2x.png"/>
+        </div>
+        <div id="supply-city-name" class="select-item">
+            <span class="select-name">城市</span>
+            <img src="../images/lower@2x.png"/>
+        </div>
+        <div id="supply-sort" class="select-item">
+            <span class="select-name">排序</span>
+            <img src="../images/lower@2x.png"/>
+        </div>
+    </div>
+    <div class="mui-content" id="supply-list"></div>
+    <!--<ul id="supply-list">
+        <li class="supply-item" ng-repeat="item in supplyList">
+            <div class="supply-item-pic">
+                <img class="supply-item-img" src="{{item.pic}}"/>
+            </div>
+            <div class="supply-item-info">
+                <div class="supply-item-title">{{item.title}}</div>
+                <div class="supply-item-price">￥{{item.price}}</div>
+                <div class="supply-item-seller">{{item.seller}}</div>
+                <div class="supply-item-time">{{item.time}}</div>
+            </div>
+        </li>
+    </ul>-->
+
 </div>

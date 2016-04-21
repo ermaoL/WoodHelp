@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../css/mui.min.css">
+    <link rel="stylesheet" href="../../css/home-styles.css">
+</head>
+
+<body>
+<!--下拉刷新容器-->
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="margin-top: 100px;">
+    <div class="mui-scroll">
+        <!--数据列表-->
+        <ul class="mui-table-view mui-table-view-chevron">
+
+        </ul>
+    </div>
+</div>
+<script src="../../js/vendors/jquery-2.2.1.min.js"></script>
+<script src="../../js/vendors/mui.min.js"></script>
+<script>
+
+    $('#pullrefresh').css("height", $(window).height()-150);
+    $('#pullrefresh').css("overflow-y", "auto");
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            down: {
+                callback: pulldownRefresh
+            },
+            up: {
+                contentrefresh: '正在加载...',
+                callback: pullupRefresh
+            }
+        }
+    });
+    var list = {"supply": [{"pic":"../../images/shuijiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../../images/muwu.jpg", "title":"全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../../images/cbd.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"}]};
+
+    /**
+     * 下拉刷新具体业务实现
+     */
+    function pulldownRefresh() {
+
+        setTimeout(function() {
+            /*<li class="supply-item" ng-repeat="item in supplyList">
+                <div class="supply-item-pic">
+                    <img class="supply-item-img" src="{{item.pic}}"/>
+                </div>
+                <div class="supply-item-info">
+                    <div class="supply-item-title">{{item.title}}</div>
+                    <div class="supply-item-price">￥{{item.price}}</div>
+                    <div class="supply-item-seller">{{item.seller}}</div>
+                    <div class="supply-item-time">{{item.time}}</div>
+                </div>
+            </li>*/
+            var table = document.body.querySelector('.mui-table-view');
+//            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+            var data = list.supply;
+            for (var i = 0; i < data.length; i++) {
+                var li = document.createElement('li');
+                li.className = 'supply-item';
+                li.innerHTML = '<div class="supply-item-pic"><img class="supply-item-img" src="'+data[i].pic+'"/></div><div class="supply-item-info"><div class="supply-item-title">'+data[i].title+'</div><div class="supply-item-price">￥'+data[i].price+'</div><div class="supply-item-seller">'+data[i].seller+'</div><div class="supply-item-time">'+data[i].time+'</div></div>';
+                table.insertBefore(li, table.firstChild);
+            }
+
+
+            /*for (var i = cells.length, len = i + 3; i < len; i++) {
+                var li = document.createElement('li');
+                li.className = 'mui-table-view-cell';
+                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+                //下拉刷新，新纪录插到最前面；
+                table.insertBefore(li, table.firstChild);
+            }*/
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+        }, 1500);
+    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+            var table = document.body.querySelector('.mui-table-view');
+            var data = list.supply;
+            for (var i = 0; i < data.length; i++) {
+                var li = document.createElement('li');
+                li.className = 'supply-item';
+                li.innerHTML = '<div class="supply-item-pic"><img class="supply-item-img" src="'+data[i].pic+'"/></div><div class="supply-item-info"><div class="supply-item-title">'+data[i].title+'</div><div class="supply-item-price">￥'+data[i].price+'</div><div class="supply-item-seller">'+data[i].seller+'</div><div class="supply-item-time">'+data[i].time+'</div></div>';
+                table.appendChild(li);
+            }
+           /* var cells = document.body.querySelectorAll('.mui-table-view-cell');
+            for (var i = cells.length, len = i + 20; i < len; i++) {
+                var li = document.createElement('li');
+                li.className = 'mui-table-view-cell';
+                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+                table.appendChild(li);
+            }*/
+        }, 1500);
+    }
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+        mui.ready(function() {
+            mui('#pullrefresh').pullRefresh().pullupLoading();
+        });
+    }
+</script>
+</body>
+
+</html>
