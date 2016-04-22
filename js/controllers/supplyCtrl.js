@@ -18,19 +18,19 @@ function supplyCtrl($scope) {
             }
         }]
     });
-    mui('.mui-scroll-wrapper').scroll();
-    mui('body').on('shown', '.mui-popover', function(e) {
-        //console.log('shown', e.detail.id);//detail为当前popover元素
-    });
-    mui('body').on('hidden', '.mui-popover', function(e) {
-        //console.log('hidden', e.detail.id);//detail为当前popover元素
-    });
 
-    var contentWebview = null;
-    document.querySelector('header').addEventListener('doubletap',function () {
-        if(contentWebview==null){
-            contentWebview = plus.webview.currentWebview().children()[0];
-        }
-        contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+    $('.select-menu').each(function () {
+        var myDiv = $(this);
+        $('#supply-type-name').click(function (event) {
+            $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            $(document).one("click", function () { //对document绑定一个影藏Div方法
+                $(myDiv).parent().hide();
+            });
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+
+        $(myDiv).click(function (event) {
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
     });
 }

@@ -9,14 +9,16 @@ body {
 
 .title {
     color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+}
+
+.back-a {
 }
 
 .back-icon {
+    margin: 12px 15px 12px 3px;
     width: 11px;
     height: 20px;
-    margin-left: 10px;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -132,4 +134,93 @@ body {
     border: none;
 }
 
+/* 发布货源 */
+.publish-item {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ebebeb;
+    background: #ffffff;
+    position: relative;
+}
 
+.item-label {
+    font-size: 14px;
+    color: #313131;
+    margin-left: 10px;
+    height: 39px;
+    line-height: 39px;
+}
+
+.item-input[type=text] {
+    font-size: 14px;
+    color: #313131;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.publish-add {
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    background: #ffffff;
+    position: relative;
+}
+
+.item-hint {
+    font-size: 14px;
+    color: #959595;
+    height: 39px;
+    line-height: 39px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    right: 10px;
+}
+
+.pic-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.publish-pic {
+    width: 33.3%;
+    height: auto;
+}
+
+.publish-img {
+    width: 100%;
+    height: 60px;
+}
+
+.publish-video {
+    width: 100%;
+    height: auto;
+}
+
+.publish-video-bg {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 5px;
+}
+
+.publish-product-desc {
+    font-size: 14px;
+}
+
+.publish-btn {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background: #e98c06;
+    color: #ffffff;
+    font-size: 16px;
+}

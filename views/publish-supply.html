@@ -5,16 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Title</title>
+    <title>发布货源</title>
     <link rel="stylesheet" href="../css/mui.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color:#959595; }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:#959595; }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:#959595; }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:#959595; }
+    </style>
 </head>
 <body>
-<header class="mui-bar mui-bar-nav" style="background: #e98c06">
-    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-    <div class="mui-title title">发布货源</div>
-</header>
-    this is publish page.
+    <header class="mui-bar mui-bar-nav" style="background: #e98c06">
+        <a class="mui-action-back back-a">
+            <img class="back-icon" src="../images/back@2x.png"/>
+        </a>
+        <div class="mui-title title">发布货源</div>
+    </header>
+    <div class="mui-content" id="publish-supply-content">
+        <form>
+            <div class="publish-item">
+                <label for="_productName" class="item-label">产品名称</label>
+                <input id="_productName" class="item-input" type="text" placeholder="请输入产品名称"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productType" class="item-label">产品类别</label>
+                <input id="_productType" class="item-input" type="text" placeholder="请输入产品名称"/>
+            </div>
+            <div class="publish-add">
+                <label class="item-label">添加图片</label>
+                <span class="item-hint">（最多可上传10张图片）</span>
+                <div class="pic-container">
+                    <div class="publish-pic">
+                        <img class="publish-img" src="../images/add@2x.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="publish-add">
+                <label class="item-label">添加视频</label>
+                <span class="item-hint">（建议视频大小≤50M）</span>
+                <div class="pic-container">
+                    <div class="publish-video">
+                        <img class="publish-video-bg" src="../images/add@2x.png"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publish-item" style="margin-top: 10px; border-top: 1px solid #ebebeb">
+                <label for="_productSpec" class="item-label">规格</label>
+                <input id="_productSpec" class="item-input" type="text" placeholder="请输入规格"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productPrice" class="item-label">价格</label>
+                <input id="_productPrice" class="item-input" type="text" placeholder="请输入价格"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productPlace" class="item-label">产地</label>
+                <input id="_productPlace" class="item-input" type="text" placeholder="请输入产地"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productStock" class="item-label">库存量</label>
+                <input id="_productStock" class="item-input" type="text" placeholder="请输入库存量"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productUnit" class="item-label">单位</label>
+                <input id="_productUnit" class="item-input" type="text" placeholder="请输入单位"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productStorage" class="item-label">仓储地址</label>
+                <input id="_productStorage" class="item-input" type="text" placeholder="请选择仓储地址所在的省、市"/>
+            </div>
+            <div class="publish-item">
+                <label for="_productDetail" class="item-label">详细地址</label>
+                <input id="_productDetail" class="item-input" type="text" placeholder="请输入仓储详细地址"/>
+            </div>
+            <div class="publish-add">
+                <label class="item-label">产品描述</label>
+                <div class="pic-container">
+                    <div class="mui-input-row">
+                        <textarea class="publish-product-desc" id="textarea" rows="5" placeholder="请输入产品描述"></textarea>
+                        <span class="publish-word-count">0/500</span>
+                    </div>
+                </div>
+            </div>
+            <button class="publish-btn">立即发布</button>
+        </form>
+    </div>
+    <script src="../js/vendors/jquery-2.2.1.min.js"></script>
     <script src="../js/vendors/mui.min.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 </html>
