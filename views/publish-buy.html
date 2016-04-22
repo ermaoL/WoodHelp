@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>发布采购</title>
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color:#959595; }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:#959595; }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:#959595; }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:#959595; }
+    </style>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav" style="background: #e98c06">
+    <a class="mui-action-back back-a">
+        <img class="back-icon" src="../images/back@2x.png"/>
+    </a>
+    <div class="mui-title title">发布采购</div>
+</header>
+<div class="mui-content" id="publish-buy-content">
+    <form>
+        <div class="publish-item">
+            <label for="_buyName" class="item-label">求购品名</label>
+            <input id="_buyName" class="item-input" type="text" placeholder="请输入求购产品名称"/>
+        </div>
+        <div class="publish-item">
+            <label for="_productStorage" class="item-label">交货城市</label>
+            <input id="_productStorage" class="item-input" type="text" placeholder="请选择交货省份、城市"/>
+        </div>
+        <div class="publish-add">
+            <label class="item-label">求购价格</label>
+            <div class="buy-price-container">
+                <div class="buy-price-btn" style="margin-right: 2%;">电议</div>
+                <div class="buy-price-btn" style="margin-right: 2%;">面议</div>
+                <div class="buy-price-btn">价格区间</div>
+            </div>
+            <div class="price-range">
+                <input id="lowest-price-input" type="number" placeholder="输入最低价格"/>
+                <span style="font-size: 16px;color: #313131;">至</span>
+                <input id="highest-price-input" type="number" placeholder="输入最高价格"/>
+            </div>
+        </div>
+        <div class="publish-item">
+            <label for="_buyNum" class="item-label">求购量</label>
+            <input id="_buyNum" class="item-input" type="text" placeholder="请输入求购量"/>
+        </div>
+        <div class="publish-item">
+            <label for="_productAddr" class="item-label">产品产地</label>
+            <input id="_productAddr" class="item-input" type="text" placeholder="请输入产品产地要求"/>
+        </div>
+        <div class="publish-item">
+            <label for="_buyContactName" class="item-label">联系人</label>
+            <input id="_buyContactName" class="item-input" type="text" placeholder="请输入联系人姓名"/>
+        </div>
+        <div class="publish-item">
+            <label for="_buyPhoneNum" class="item-label">联系电话</label>
+            <input id="_buyPhoneNum" class="item-input" type="text" placeholder="请输入联系电话"/>
+        </div>
+        <div class="publish-item">
+            <label class="item-label">是否将联系电话公开</label>
+            <div id="open-switch">
+
+            </div>
+        </div>
+        <div class="publish-add">
+            <label class="item-label">求购说明</label>
+            <div class="pic-container">
+                <div class="mui-input-row">
+                    <textarea class="publish-product-desc" id="textarea" rows="5" placeholder="请输入求购说明"></textarea>
+                </div>
+                <span class="publish-word-count">0/500</span>
+            </div>
+        </div>
+        <button class="publish-btn">立即发布</button>
+    </form>
+</div>
+<script src="../js/vendors/jquery-2.2.1.min.js"></script>
+<script src="../js/vendors/mui.min.js"></script>
+<script src="../js/common.js"></script>
+</body>
+</html>

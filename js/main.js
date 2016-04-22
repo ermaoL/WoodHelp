@@ -14,33 +14,40 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('homePage', {
             url: "/homePage",
-            templateUrl: "tabs/home-page.html",
+            templateUrl: "views/tabs/home-page.html",
             controller: "homeCtrl"
         })
         .state('latestSupply', {
             url: "/latestSupply",
-            templateUrl: "tabs/latest-supply.html",
+            templateUrl: "views/tabs/latest-supply.html",
             controller: "supplyCtrl"
         })
         .state('latestSupply.list', {
             url: "/list",
-            templateUrl: "tabs/supply-list.html"
+            templateUrl: "views/tabs/supply-list.html"
         })
         .state('newestBuy', {
             url: "/newestBuy",
-            templateUrl: "tabs/newest-buy.html",
+            templateUrl: "views/tabs/newest-buy.html",
             controller: "buyCtrl"
         })
         .state('shopCar', {
             url: "/shopCar",
-            templateUrl: "tabs/shop-car.html"
+            templateUrl: "views/tabs/shop-car.html"
         })
         .state('mine', {
             url: "/mine",
-            templateUrl: "tabs/mine.html"
+            templateUrl: "views/tabs/mine.html"
     });
 });
 
-(function() {
-
-}());
+myApp.controller('nearbyCtrl', function($scope) {
+    var height = $(window).height() - 45;
+    $(".nearby-list").css("height", height);
+    var list = {"supply": [{"pic":"../images/shuijiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../images/muwu.jpg", "title":"全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../images/cbd.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"}]};
+    $scope.nearbySupplyList = list.supply;
+});

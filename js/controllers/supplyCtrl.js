@@ -10,7 +10,7 @@ function supplyCtrl($scope) {
             doubletap:true
         },
         subpages:[{
-            url:'tabs/supply-list.html',
+            url:'views/tabs/supply-list.html',
             id:'supply-list.html',
             styles:{
                 top: '100px',

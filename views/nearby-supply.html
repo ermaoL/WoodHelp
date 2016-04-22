@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>附近货源</title>
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/home-styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav" style="background: #e98c06">
+        <a class="mui-action-back back-a">
+            <img class="back-icon" src="../images/back@2x.png"/>
+        </a>
+        <div class="mui-title title">附近货源</div>
+        <div class="nearby-city">
+            <span id="nearbyCityName" class="city-name">未定位</span>
+            <img src="../images/arrow@2x.png"/>
+        </div>
+    </header>
+
+    <div class="mui-content" ng-app="myApp" ng-controller="nearbyCtrl">
+        <ul class="nearby-list">
+        <li class="supply-item" ng-repeat="item in nearbySupplyList">
+            <div class="supply-item-pic">
+                <img class="supply-item-img" src="{{item.pic}}"/>
+            </div>
+            <div class="supply-item-info">
+                <div class="supply-item-title">{{item.title}}</div>
+                <div class="supply-item-price">￥{{item.price}}</div>
+                <div class="supply-item-seller">{{item.seller}}</div>
+                <div class="supply-item-time">{{item.time}}</div>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+    <script src="../js/vendors/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular-ui-router.js"></script>
+    <script src="../js/vendors/mui.min.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=5e255c570198b9877b9c54fb76424c15&plugin=AMap.CitySearch"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+    <!--<script src="../js/controllers/neabyCtrl.js"></script>-->
+</body>
+</html>

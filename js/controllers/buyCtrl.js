@@ -9,7 +9,7 @@ function buyCtrl($scope) {
             doubletap:true
         },
         subpages:[{
-            url:'tabs/buy-list.html',
+            url:'views/tabs/buy-list.html',
             id:'buy-list.html',
             styles:{
                 top: '100px',
