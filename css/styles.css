@@ -188,6 +188,7 @@ body {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
 }
 
 .publish-pic {
@@ -221,6 +222,15 @@ body {
     position: absolute;
     bottom: 0;
     background: #e98c06;
+    padding-bottom: 20px;
     color: #ffffff;
     font-size: 16px;
+}
+
+.publish-word-count {
+    font-size: 14px;
+    color: #959595;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
 }
