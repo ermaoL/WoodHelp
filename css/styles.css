@@ -9,16 +9,32 @@ body {
 
 .title {
     color: #ffffff;
-    font-size: 16px;
-}
-
-.back-a {
+    font-size: 18px;
+    display: inline;
+    margin-left: 5px;
 }
 
 .back-icon {
-    margin: 12px 15px 12px 3px;
+    margin: 12px 15px 12px 10px;
     width: 11px;
     height: 20px;
+}
+
+.mui-btn {
+    font-size: 16px;
+    padding: 8px;
+    margin: 3px;
+}
+h5.mui-content-padded {
+    margin-left: 3px;
+    margin-top: 20px !important;
+}
+h5.mui-content-padded:first-child {
+    margin-top: 12px !important;
+}
+.ui-alert {
+    text-align: center;
+    font-size: 16px;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -61,7 +77,7 @@ body {
     margin: 10px 5px 10px 25px;
 }
 
-.lr-input > input {
+.input-info[type=number], .input-info[type=password] {
     position: absolute;
     left: 45px;
     margin: 0;
@@ -123,14 +139,16 @@ body {
     padding-top: 80px;
 }
 
-.valid-btn {
+.valid-btn[type=button] {
     position: absolute;
     right: 8px;
     height: 36px;
+    width: 100px;
     margin-top: 7px;
     color: #f19329;
+    font-size: 14px;
     background: url("../images/button10@2x.png");
-    background-size: 100% 36px;
+    background-size: 100px 36px;
     border: none;
 }
 
@@ -165,7 +183,22 @@ body {
     padding: 0;
 }
 
-.item-select[type=text] {
+.item-select[type=button] {
+    font-size: 14px;
+    color: #959595;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item-select-div {
+    height: 40px;
+    line-height: 40px;
     font-size: 14px;
     color: #313131;
     position: absolute;
@@ -176,6 +209,7 @@ body {
     border: none;
     margin: 0;
     padding: 0;
+    display: none;
 }
 
 .type-down-arrow {
@@ -283,6 +317,12 @@ body {
     background-size: 100% 40px;
 }
 
+.buy-price-btn-active {
+    background: url("../images/button2@2x.png") no-repeat;
+    background-size: 100% 40px;
+    color: #ffffff;
+}
+
 .price-range {
     height: 50px;
     margin-left: 10px;
@@ -291,6 +331,7 @@ body {
     background: url("../images/input@2x.png") no-repeat;
     background-size: 100% 50px;
     position: relative;
+    display: none;
 }
 
 #lowest-price-input[type=number] {
@@ -317,7 +358,7 @@ body {
     padding: 0 0 0 10px;
 }
 
-#open-switch {
+.open-switch {
     width: 50px;
     height: 25px;
     display: inline;
@@ -325,6 +366,17 @@ body {
     margin-right: 10px;
     margin-top: 7px;
     background: url("../images/on@2x.png") no-repeat;
+    background-size: 50px 25px;
+}
+
+.off-switch {
+    width: 50px;
+    height: 25px;
+    display: inline;
+    float: right;
+    margin-right: 10px;
+    margin-top: 7px;
+    background: url("../images/off@2x_9.png") no-repeat;
     background-size: 50px 25px;
 }
 
@@ -345,4 +397,158 @@ body {
     overflow-y: auto;
     background: #ffffff;
     border-top: 1px solid #e9e9e9;
+}
+
+/* 货源详情 */
+.collection-img {
+    float: right;
+    margin-right: 10px;
+    margin-top: 13px;
+    width: 23px;
+    height: 19px;
+}
+
+.supply-detail-tab {
+    width: 100%;
+    height: 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.supply-detail-sub {
+    display: inline;
+    float: left;
+    width: 50%;
+    height: 40px;
+    position: relative;
+}
+
+.supply-sub-title {
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #313131;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.supply-sub-title-active {
+    color: #e98c06;
+    border-bottom: 2px solid #e98c06;
+}
+
+.sup-detail-name-container {
+    width: 100%;
+    padding: 10px;
+    background: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.sup-detail-name {
+    width: 65%;
+    color: #313131;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.sup-detail-price {
+    width: 30%;
+    color: #ff0000;
+    font-size: 16px;
+    position: absolute;
+    left: 70%;
+    top: 0%;
+    bottom: 0%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.sup-info-img {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+}
+
+.sup-info-title {
+    height: 39px;
+    line-height: 39px;
+    font-size: 14px;
+    color: #313131;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.sup-detail-item {
+    font-size: 14px;
+    color: #313131;
+    height: 39px;
+    line-height: 39px;
+    margin-left: 10px;
+}
+
+.right-arrow {
+    width: 6px;
+    height: 12px;
+}
+
+.sup-detail-intro {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #313131;
+    background: #ffffff;
+    border-bottom: 1px solid #ebebeb;
+}
+
+/* 采购详情 */
+#buy-detail-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.phone-btn {
+    background: url("../images/button7@2x.png") no-repeat;
+    background-size: 90px 30px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #ffffff;
+    display: inline;
+    float: right;
+    margin-right: 10px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.phone-pic {
+    width: 15px;
+    height: 15px;
+    margin-bottom: -3px;
+}
+
+.buy-intro {
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #313131;
+}
+
+.buy-intro-info {
+    margin-top: -10px;
 }

@@ -3,33 +3,28 @@
  */
 function buyCtrl($scope) {
 
-    //启用双击监听
-    mui.init({
-        gestureConfig:{
-            doubletap:true
-        },
-        subpages:[{
-            url:'views/tabs/buy-list.html',
-            id:'buy-list.html',
-            styles:{
-                top: '100px',
-                bottom: '50px',
-            }
-        }]
-    });
-    mui('.mui-scroll-wrapper').scroll();
-    mui('body').on('shown', '.mui-popover', function(e) {
-        //console.log('shown', e.detail.id);//detail为当前popover元素
-    });
-    mui('body').on('hidden', '.mui-popover', function(e) {
-        //console.log('hidden', e.detail.id);//detail为当前popover元素
+    $('.select-menu').each(function () {
+        var myDiv = $(this);
+        $('#supply-type-name').click(function (event) {
+            $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            $(document).one("click", function () { //对document绑定一个影藏Div方法
+                $(myDiv).parent().hide();
+            });
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+
+        $(myDiv).click(function (event) {
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
     });
 
-    var contentWebview = null;
-    document.querySelector('header').addEventListener('doubletap',function () {
-        if(contentWebview==null){
-            contentWebview = plus.webview.currentWebview().children()[0];
-        }
-        contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
-    });
+    var height = $(window).height() - 140;
+    $("#buy-list").css("height", height);
+    $("#buy-list").css("overflow-y", "auto");
+    var list = {"supply": [{"pic":"images/shuijiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/muwu.jpg", "title":"全新进口瑞典云杉木材全全新进口瑞典云杉木材全全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/cbd.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"}]};
+    $scope.newestBuyList = list.supply;
 }

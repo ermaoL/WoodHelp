@@ -11,33 +11,36 @@
 </head>
 <body style="background: url('../images/bg.png') no-repeat; width: 100%; height: 100%;">
 <div>
-    <header>
-        <a class="mui-action-back mui-pull-left"><img class="back-icon" style="margin-top: 10px" src="../images/back@2x.png"></a>
+    <header style="background: transparent;">
+        <a class="mui-action-back" style="position: absolute; z-index: 10;">
+            <img class="back-icon" src="../images/back@2x.png"/>
+        </a>
         <div class="mui-title title">忘记密码</div>
     </header>
-    <div class="register">
+    <form class="register">
         <div class="lr-input">
             <img class="lr-icon" src="../images/icon12@2x.png">
-            <input type="text" placeholder="请输入手机号码" />
+            <input class="input-info" type="number" placeholder="请输入手机号码" />
         </div>
         <div class="lr-input">
             <img class="lr-icon" src="../images/icon15@2x.png">
-            <input style="width: 40%" type="text" placeholder="验证码" />
-            <button class="valid-btn">获取验证码</button>
+            <input class="input-info" style="width: 40%" type="number" placeholder="验证码" />
+            <input type="button" id="reset-valid" class="valid-btn" value="获取验证码"/>
         </div>
         <div class="lr-input">
             <img class="lr-icon" src="../images/icon14@2x.png">
-            <input type="text" placeholder="请设置新密码" />
+            <input class="input-info" type="password" placeholder="请设置新密码" />
         </div>
         <div class="lr-input">
             <img class="lr-icon" src="../images/icon14@2x.png">
-            <input type="text" placeholder="请再次输入新密码" />
+            <input class="input-info" type="password" placeholder="请再次输入新密码" />
         </div>
         <button class="log-submit">确认</button>
-    </div>
-
-
+    </form>
 </div>
 
+<script src="../js/vendors/jquery-2.2.1.min.js"></script>
+<script src="../js/vendors/mui.min.js"></script>
+<script src="../js/common.js"></script>
 </body>
 </html>

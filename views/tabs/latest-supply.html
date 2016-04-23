@@ -20,7 +20,6 @@
             <img src="images/lower@2x.png"/>
         </a>
     </div>
-    <div class="mui-content" id="supply-list"></div>
     <div class="menu-all">
         <div class="select-menu">
             <div class="select-list">
@@ -68,19 +67,21 @@
         </div>
     </div>
 
-    <!--<ul id="supply-list">
-        <li class="supply-item" ng-repeat="item in supplyList">
-            <div class="supply-item-pic">
-                <img class="supply-item-img" src="{{item.pic}}"/>
-            </div>
-            <div class="supply-item-info">
-                <div class="supply-item-title">{{item.title}}</div>
-                <div class="supply-item-price">￥{{item.price}}</div>
-                <div class="supply-item-seller">{{item.seller}}</div>
-                <div class="supply-item-time">{{item.time}}</div>
-            </div>
+    <ul id="supply-list">
+        <li class="supply-item" ng-repeat="item in lastestSupplyList">
+            <a href="views/supply-detail.html">
+                <div class="supply-item-pic">
+                    <img class="supply-item-img" src="{{item.pic}}"/>
+                </div>
+                <div class="supply-item-info">
+                    <div class="supply-item-title">{{item.title}}</div>
+                    <div class="supply-item-price">￥{{item.price}}</div>
+                    <div class="supply-item-seller">{{item.seller}}</div>
+                    <div class="supply-item-time">{{item.time}}</div>
+                </div>
+            </a>
         </li>
-    </ul>-->
+    </ul>
 
 </div>
 

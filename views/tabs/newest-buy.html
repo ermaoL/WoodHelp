@@ -7,62 +7,74 @@
         <div class="supply-header-search">搜索</div>
     </header>
     <div class="select">
-        <a href="#middlePopover" id="supply-type-name" class="select-item">
+        <a href="#middlePopover" id="buy-type-name" class="select-item">
             <span class="select-name">品名</span>
             <img src="images/lower@2x.png"/>
         </a>
-        <a id="supply-city-name" class="select-item">
+        <a id="buy-city-name" class="select-item">
             <span class="select-name">城市</span>
             <img src="images/lower@2x.png"/>
         </a>
-        <a id="supply-sort" class="select-item">
+        <a id="buy-sort" class="select-item">
             <span class="select-name">排序</span>
             <img src="images/lower@2x.png"/>
         </a>
     </div>
-    <div class="mui-content" id="supply-list"></div>
-    <div id="middlePopover" class="mui-popover">
-        <div class="mui-popover-arrow"></div>
-        <div class="mui-scroll-wrapper">
-            <div class="mui-scroll">
-                <ul class="mui-table-view">
-                    <li class="mui-table-view-cell"><a href="#">Item1</a>
+    <div class="menu-all">
+        <div class="select-menu">
+            <div class="select-list">
+                <ul class="menu-first">
+                    <li>
+                        <span class="menu-type">全部</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
-                    <li class="mui-table-view-cell"><a href="#">Item2</a>
+                    <li>
+                        <span class="menu-type">红木</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
-                    <li class="mui-table-view-cell"><a href="#">Item3</a>
+                    <li>
+                        <span class="menu-type">家具用料</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
-                    <li class="mui-table-view-cell"><a href="#">Item4</a>
+                    <li>
+                        <span class="menu-type">建筑用料</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
-                    <li class="mui-table-view-cell"><a href="#">Item5</a>
+                    <li>
+                        <span class="menu-type">人造板</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
-                    <li class="mui-table-view-cell"><a href="#">Item6</a>
-                    </li>
-                    <li class="mui-table-view-cell"><a href="#">Item7</a>
-                    </li>
-                    <li class="mui-table-view-cell"><a href="#">Item8</a>
-                    </li>
-                    <li class="mui-table-view-cell"><a href="#">Item9</a>
-                    </li>
-                    <li class="mui-table-view-cell"><a href="#">Item10</a>
+                    <li>
+                        <span class="menu-type">其他</span>
+                        <img class="menu-left-arrow" src="images/arrow4@2x.png">
                     </li>
                 </ul>
             </div>
+            <div class="select-list">
+                <ul class="menu-second">
+                    <li>list2-item1</li>
+                    <li>list2-item2</li>
+                    <li>list2-item3</li>
+                    <li>list2-item4</li>
+                    <li>list2-item5</li>
+                    <li>list2-item6</li>
+                    <li>list2-item3</li>
+                    <li>list2-item4</li>
+                    <li>list2-item5</li>
+                    <li>list2-item6</li>
+                </ul>
+            </div>
         </div>
-
     </div>
-    <!--<ul id="supply-list">
-        <li class="supply-item" ng-repeat="item in supplyList">
-            <div class="supply-item-pic">
-                <img class="supply-item-img" src="{{item.pic}}"/>
-            </div>
-            <div class="supply-item-info">
-                <div class="supply-item-title">{{item.title}}</div>
-                <div class="supply-item-price">￥{{item.price}}</div>
-                <div class="supply-item-seller">{{item.seller}}</div>
-                <div class="supply-item-time">{{item.time}}</div>
-            </div>
-        </li>
-    </ul>-->
+    <ul id="buy-list">
+        <a href="views/buy-detail.html">
+            <li class="supply-item" ng-repeat="item in newestBuyList">
+                <div class="buy-item-title">{{item.title}}</div>
+                <div class="buy-item-city">交货城市：{{item.city}}</div>
+                <div class="buy-item-city">发布时间{{item.time}}</div>
+                <div class="buy-item-num">求购量：{{item.buyNum}}</div>
+            </li>
+        </a>
+    </ul>
 
 </div>

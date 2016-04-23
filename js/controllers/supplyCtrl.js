@@ -4,21 +4,6 @@
 
 function supplyCtrl($scope) {
 
-    //启用双击监听
-    mui.init({
-        gestureConfig:{
-            doubletap:true
-        },
-        subpages:[{
-            url:'views/tabs/supply-list.html',
-            id:'supply-list.html',
-            styles:{
-                top: '100px',
-                bottom: '50px',
-            }
-        }]
-    });
-
     $('.select-menu').each(function () {
         var myDiv = $(this);
         $('#supply-type-name').click(function (event) {
@@ -33,4 +18,13 @@ function supplyCtrl($scope) {
             event.stopPropagation(); //阻止事件向上冒泡
         });
     });
+    var height = $(window).height() - 140;
+    $("#supply-list").css("height", height);
+    $("#supply-list").css("overflow-y", "auto");
+    var list = {"supply": [{"pic":"images/shuijiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/muwu.jpg", "title":"全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/cbd.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"},
+        {"pic":"images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"}]};
+    $scope.lastestSupplyList = list.supply;
 }

@@ -20,8 +20,8 @@
 <div class="bottom-nav">
     <div>
         <a id="bottom-home" ui-sref="homePage">
-            <img class="nav-icon" src="images/home@2x.png"/>
-            <div class="nav-name">首页</div>
+            <img class="nav-icon" src="images/home1@2x.png"/>
+            <div class="nav-name" style="color: #e98c06;">首页</div>
         </a>
     </div>
     <div>
@@ -37,13 +37,13 @@
         </a>
     </div>
     <div>
-        <a id="bottom-shop" ui-sref="shopCar">
+        <a id="bottom-shop">
             <img class="nav-icon" src="images/Cart@2x.png"/>
             <div class="nav-name">购物车</div>
         </a>
     </div>
     <div>
-        <a id="bottom-mine" ui-sref="mine">
+        <a id="bottom-mine">
             <img class="nav-icon" src="images/user@2x.png"/>
             <div class="nav-name">我的</div>
         </a>
@@ -63,10 +63,6 @@
     <script src="js/controllers/supplyCtrl.js"></script>
     <script src="js/controllers/buyCtrl.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#bottom-home").children("img").attr("src","images/home1@2x.png");
-            $("#bottom-home").children("div").css("color","#e98c06");
-        });
         $("#bottom-home").click(function () {
             $("#bottom-home").children("img").attr("src","images/home1@2x.png");
             $("#bottom-home").children("div").css("color","#e98c06");

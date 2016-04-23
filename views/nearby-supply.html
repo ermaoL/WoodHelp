@@ -24,17 +24,20 @@
 
     <div class="mui-content" ng-app="myApp" ng-controller="nearbyCtrl">
         <ul class="nearby-list">
-        <li class="supply-item" ng-repeat="item in nearbySupplyList">
-            <div class="supply-item-pic">
-                <img class="supply-item-img" src="{{item.pic}}"/>
-            </div>
-            <div class="supply-item-info">
-                <div class="supply-item-title">{{item.title}}</div>
-                <div class="supply-item-price">￥{{item.price}}</div>
-                <div class="supply-item-seller">{{item.seller}}</div>
-                <div class="supply-item-time">{{item.time}}</div>
-            </div>
-        </li>
+            <a href="supply-detail.html">
+                <li class="supply-item" ng-repeat="item in nearbySupplyList">
+                    <div class="supply-item-pic">
+                        <img class="supply-item-img" src="{{item.pic}}"/>
+                    </div>
+                    <div class="supply-item-info">
+                        <div class="supply-item-title">{{item.title}}</div>
+                        <div class="supply-item-price">￥{{item.price}}</div>
+                        <div class="supply-item-seller">{{item.seller}}</div>
+                        <div class="supply-item-time">{{item.time}}</div>
+                    </div>
+                </li>
+            </a>
+
     </ul>
     </div>
 

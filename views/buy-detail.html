@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>采购详情</title>
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body ng-app="myApp" ng-controller="buyDetailCtrl">
+<header class="mui-bar mui-bar-nav" style="background: #e98c06">
+    <a class="mui-action-back back-a">
+        <img class="back-icon" src="../images/back@2x.png"/>
+    </a>
+    <div class="mui-title title">采购详情</div>
+    <img class="collection-img" src="../images/Collection1@2x.png"/>
+</header>
+<div class="mui-content" id="buy-detail-content">
+    <div class="publish-item">
+        <span class="sup-detail-item">求购品名：南美AA级指接板</span>
+    </div>
+    <div class="publish-item">
+        <span class="sup-detail-item">求购量：2000m³</span>
+    </div>
+    <div class="publish-item">
+        <span class="sup-detail-item">产地要求：巴西</span>
+    </div>
+    <div class="publish-item">
+        <span class="sup-detail-item">交货城市：福建 厦门</span>
+    </div>
+    <div class="publish-item">
+        <span class="sup-detail-item">联系人：木材帮客服</span>
+    </div>
+    <div class="publish-item">
+        <span class="sup-detail-item">联系电话：13956899254</span>
+        <div class="phone-btn">
+            <img class="phone-pic" src="../images/icon9@2x.png"/>
+            <span>马上联系</span>
+        </div>
+        <div class="buy-intro">
+            <div style="height: 40px;">求购说明：</div>
+            <div class="buy-intro-info">
+                以下是求购说明，忽略以下文字，生产车间18000平方米，拥有技术员工380人，是一家专业生产
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="../js/vendors/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../js/vendors/angular.js"></script>
+<script type="text/javascript" src="../js/vendors/angular-ui-router.js"></script>
+<script src="../js/vendors/mui.min.js"></script>
+<script src="../js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        var height = $(window).height() - 45;
+        $("#buy-detail-content").css("height", height);
+    });
+</script>
+</body>
+</html>

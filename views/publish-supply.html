@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>发布货源</title>
     <link rel="stylesheet" href="../css/mui.min.css">
+    <link href="../css/mui.picker.css" rel="stylesheet" />
+    <link href="../css/mui.poppicker.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         ::-webkit-input-placeholder { /* WebKit browsers */
@@ -32,9 +34,10 @@
                 <label for="_productName" class="item-label">产品名称</label>
                 <input id="_productName" class="item-input" type="text" placeholder="请输入产品名称"/>
             </div>
-            <div class="publish-item">
+            <div class="publish-item" type="button" id="showUserPicker">
                 <label for="_productType" class="item-label">产品类别</label>
-                <input id="_productType" class="item-select" type="text" placeholder="请选择产品类别" disabled/>
+                <input id="_productType" class="item-select" type="button" value="请选择产品类别"/>
+                <div id="_productType1" class="item-select-div"></div>
                 <img class="type-down-arrow" src="../images/arrow3@2x.png"/>
             </div>
             <div class="publish-add">
@@ -78,7 +81,8 @@
             </div>
             <div class="publish-item">
                 <label for="_productStorage" class="item-label">仓储地址</label>
-                <input id="_productStorage" class="item-select" type="text" placeholder="请选择仓储地址所在的省、市" disabled/>
+                <input id="_productStorage" class="item-select" type="button" value="请选择仓储地址所在的省、市"/>
+                <div id="_productStorage1" class="item-select-div"></div>
                 <img class="address-down-arrow" src="../images/arrow3@2x.png"/>
             </div>
             <div class="publish-item">
@@ -99,6 +103,9 @@
     </div>
     <script src="../js/vendors/jquery-2.2.1.min.js"></script>
     <script src="../js/vendors/mui.min.js"></script>
+    <script src="../js/vendors/mui.picker.js"></script>
+    <script src="../js/vendors/mui.poppicker.js"></script>
+    <script src="../js/vendors/city.data.js" type="text/javascript" charset="utf-8"></script>
     <script src="../js/common.js"></script>
 </body>
 </html>

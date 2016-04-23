@@ -51,3 +51,13 @@ myApp.controller('nearbyCtrl', function($scope) {
         {"pic":"../images/yuantiao.jpg", "title":"全新进口瑞典云杉木材", "price":"5640", "seller":"福建龙岩某某某钢材厂", "time":"2016.04.22"}]};
     $scope.nearbySupplyList = list.supply;
 });
+
+myApp.controller('supplyDetailCtrl', function ($scope) {
+    var height = $(window).height() - 90;
+    $("#supply-detail-content").css("height", height);
+});
+
+myApp.controller('buyDetailCtrl', function ($scope) {
+    var height = $(window).height() - 90;
+    $("#supply-detail-content").css("height", height);
+});

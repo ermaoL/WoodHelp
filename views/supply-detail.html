@@ -2,12 +2,134 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Title</title>
+    <title>货源详情</title>
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    this is a page which detail of supply.
+<body ng-app="myApp" ng-controller="supplyDetailCtrl">
+    <header class="mui-bar mui-bar-nav" style="background: #e98c06">
+        <a class="mui-action-back back-a">
+            <img class="back-icon" src="../images/back@2x.png"/>
+        </a>
+        <div class="mui-title title">货源详情</div>
+        <img class="collection-img" src="../images/Collection1@2x.png"/>
+    </header>
+    <div class="mui-content">
+        <div class="supply-detail-tab">
+            <div class="supply-detail-sub">
+                <div class="supply-sub-title supply-sub-title-active">图片</div>
+            </div>
+            <div class="supply-detail-sub">
+                <div class="supply-sub-title">视频</div>
+            </div>
+        </div>
+        <div id="supply-detail-content" style="overflow-y: auto; overflow-x: hidden;">
+            <div id="slider" class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop" style="height: 200px;">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/muwu.jpg">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/cbd.jpg">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+            <div class="sup-detail-name-container">
+                <div class="sup-detail-name">典全新进口瑞典B典全新进口瑞典Be全新进口瑞典全新进口瑞典Bergkvist SF云杉板材</div>
+                <div class="sup-detail-price">
+                    <span>￥2500/m³</span>
+                </div>
+            </div>
+            <div style="margin-top: 10px; border-bottom: 1px solid #ebebeb;">
+                <div class="publish-item">
+                    <img class="sup-info-img" src="../images/icon11@2x.png"/>
+                    <span class="sup-info-title">商品信息</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">类型：云杉</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">规格：直径60*90cm</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">产地：苏格兰</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">单位：m³</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">库存：5000</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">仓储地：山东菏泽</span>
+                </div>
+                <div class="publish-item">
+                    <span class="sup-detail-item">发布人：欣欣木材有限公司</span>
+                    <img class="right-arrow" src="../images/arrow4@2x.png"/>
+                </div>
+                <div class="publish-item" style="margin-top: 10px; border-bottom: 1px solid #ebebeb;">
+                    <img class="sup-info-img" src="../images/icon11@2x.png"/>
+                    <span class="sup-info-title">商品简介</span>
+                </div>
+                <div class="sup-detail-intro">
+                    &nbsp;&nbsp;木材帮木材帮木材帮木材帮木材帮木材帮木材帮木材帮
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/vendors/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular.js"></script>
+    <script type="text/javascript" src="../js/vendors/angular-ui-router.js"></script>
+    <script src="../js/vendors/mui.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var height = $(window).height() - 90;
+            $("#supply-detail-content").css("height", height);
+        });
+    </script>
 </body>
 </html>

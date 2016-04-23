@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>发布采购</title>
     <link rel="stylesheet" href="../css/mui.min.css">
+    <link href="../css/mui.picker.css" rel="stylesheet" />
+    <link href="../css/mui.poppicker.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         ::-webkit-input-placeholder { /* WebKit browsers */
@@ -33,15 +35,17 @@
             <input id="_buyName" class="item-input" type="text" placeholder="请输入求购产品名称"/>
         </div>
         <div class="publish-item">
-            <label for="_productStorage" class="item-label">交货城市</label>
-            <input id="_productStorage" class="item-input" type="text" placeholder="请选择交货省份、城市"/>
+            <label for="_sendCity" class="item-label">交货城市</label>
+            <input id="_sendCity" class="item-select" type="button" value="请选择交货省份、城市"/>
+            <div id="_sendCity1" class="item-select-div"></div>
+            <img class="type-down-arrow" style="left: 240px;" src="../images/arrow3@2x.png"/>
         </div>
         <div class="publish-add">
             <label class="item-label">求购价格</label>
             <div class="buy-price-container">
-                <div class="buy-price-btn" style="margin-right: 2%;">电议</div>
-                <div class="buy-price-btn" style="margin-right: 2%;">面议</div>
-                <div class="buy-price-btn">价格区间</div>
+                <div id="phone-discuss" class="buy-price-btn buy-price-btn-active" style="margin-right: 2%;">电议</div>
+                <div id="face-discuss" class="buy-price-btn" style="margin-right: 2%;">面议</div>
+                <div id="self-input" class="buy-price-btn">价格区间</div>
             </div>
             <div class="price-range">
                 <input id="lowest-price-input" type="number" placeholder="输入最低价格"/>
@@ -67,7 +71,7 @@
         </div>
         <div class="publish-item">
             <label class="item-label">是否将联系电话公开</label>
-            <div id="open-switch">
+            <div id="is-open-contact" class="open-switch">
 
             </div>
         </div>
@@ -85,6 +89,10 @@
 </div>
 <script src="../js/vendors/jquery-2.2.1.min.js"></script>
 <script src="../js/vendors/mui.min.js"></script>
+<script src="../js/vendors/mui.picker.js"></script>
+<script src="../js/vendors/mui.poppicker.js"></script>
+<script src="../js/vendors/city.data.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/common.js"></script>
+
 </body>
 </html>
