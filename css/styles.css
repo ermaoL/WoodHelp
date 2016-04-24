@@ -233,6 +233,7 @@ h5.mui-content-padded:first-child {
     border-bottom: 1px solid #ebebeb;
     background: #ffffff;
     position: relative;
+    padding-bottom: 10px;
 }
 
 .item-hint {
@@ -262,6 +263,9 @@ h5.mui-content-padded:first-child {
 .publish-img {
     width: 100%;
     height: 60px;
+    background: url("../images/add@2x.png");
+    background-size: 100% 60px;
+    border: none;
 }
 
 .publish-video {

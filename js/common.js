@@ -10,6 +10,7 @@
     $("#publish-buy-content").css("overflow-y", "auto");
     $("#publish-buy-content").css("overflow-x", "hidden");
 
+    
     // 发送验证码倒计时
     var util = {
         wait: 60,

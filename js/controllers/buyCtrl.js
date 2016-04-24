@@ -3,11 +3,39 @@
  */
 function buyCtrl($scope) {
 
-    $('.select-menu').each(function () {
+    $('.select-type-menu').each(function () {
         var myDiv = $(this);
-        $('#supply-type-name').click(function (event) {
+        $('#buy-type-name').click(function (event) {
+            $("#buy-type-name span").css("color", "#e98c06");
+            $("#buy-type-name img").attr("src", "images/upper@2x.png");
             $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            $(myDiv).parent().siblings(".menu-all").hide();
             $(document).one("click", function () { //对document绑定一个影藏Div方法
+                $(myDiv).parent().hide();
+                $("#buy-type-name span").css("color", "#313131");
+                $("#buy-type-name img").attr("src", "images/lower@2x.png");
+            });
+            $(this).one("click", function () {
+                $(myDiv).parent().hide();
+                $("#buy-type-name span").css("color", "#313131");
+                $("#buy-type-name img").attr("src", "images/lower@2x.png");
+            });
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+
+        $(myDiv).click(function (event) {
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+    });
+    $('.select-city-menu').each(function () {
+        var myDiv = $(this);
+        $('#buy-city-name').click(function (event) {
+            $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            $(myDiv).parent().siblings(".menu-all").hide();
+            $(document).one("click", function () { //对document绑定一个影藏Div方法
+                $(myDiv).parent().hide();
+            });
+            $(this).one("click", function () {
                 $(myDiv).parent().hide();
             });
             event.stopPropagation(); //阻止事件向上冒泡
@@ -15,6 +43,42 @@ function buyCtrl($scope) {
 
         $(myDiv).click(function (event) {
             event.stopPropagation(); //阻止事件向上冒泡
+        });
+    });
+    $('.select-sort-menu').each(function () {
+        var myDiv = $(this);
+        $('#buy-sort').click(function (event) {
+            $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            $(myDiv).parent().siblings(".menu-all").hide();
+            $(document).one("click", function () { //对document绑定一个影藏Div方法
+                $(myDiv).parent().hide();
+            });
+            $(this).one("click", function () {
+                $(myDiv).parent().hide();
+            });
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+
+        $(myDiv).click(function (event) {
+            event.stopPropagation(); //阻止事件向上冒泡
+        });
+    });
+
+    $(function(){
+        $("ul#type-menu li").click(function(){
+            $(this).addClass("menu-first-select").siblings().removeClass("menu-first-select");
+        });
+        $("ul#type-menu-detail li").click(function(){
+            $(this).addClass("menu-second-select").siblings().removeClass("menu-second-select");
+        });
+        $("ul#province-menu li").click(function(){
+            $(this).addClass("menu-first-select").siblings().removeClass("menu-first-select");
+        });
+        $("ul#city-menu li").click(function(){
+            $(this).addClass("menu-second-select").siblings().removeClass("menu-second-select");
+        });
+        $("ul#sort-menu li").click(function(){
+            $(this).addClass("menu-first-select").siblings().removeClass("menu-first-select");
         });
     });
 
