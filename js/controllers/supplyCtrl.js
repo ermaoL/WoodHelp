@@ -7,23 +7,16 @@ function supplyCtrl($scope) {
     $('.select-type-menu').each(function () {
         var myDiv = $(this);
         $('#supply-type-name').click(function (event) {
-            $("#supply-type-name span").css("color", "#e98c06");
-            $("#supply-type-name img").attr("src", "images/upper@2x.png");
-            $("#supply-city-name span").css("color", "#313131");
-            $("#supply-city-name img").attr("src", "images/lower@2x.png");
-            $("#supply-sort span").css("color", "#313131");
-            $("#supply-sort img").attr("src", "images/lower@2x.png");
+            $("#supply-type-name").addClass("sel-active").siblings().removeClass("sel-active");
             $(myDiv).parent().fadeIn(); //调用显示DIV方法
             $(myDiv).parent().siblings(".menu-all").hide();
             $(document).one("click", function () { //对document绑定一个影藏Div方法
                 $(myDiv).parent().hide();
-                $("#supply-type-name span").css("color", "#313131");
-                $("#supply-type-name img").attr("src", "images/lower@2x.png");
+                $("#supply-type-name").removeClass("sel-active");
             });
             $(this).one("click", function () {
                 $(myDiv).parent().hide();
-                $("#supply-type-name span").css("color", "#313131");
-                $("#supply-type-name img").attr("src", "images/lower@2x.png");
+                $("#supply-type-name").removeClass("sel-active");
             });
             event.stopPropagation(); //阻止事件向上冒泡
         });
@@ -34,25 +27,26 @@ function supplyCtrl($scope) {
     });
     $('.select-city-menu').each(function () {
         var myDiv = $(this);
+        var status = 1;
         $('#supply-city-name').click(function (event) {
-            $("#supply-city-name span").css("color", "#e98c06");
-            $("#supply-city-name img").attr("src", "images/upper@2x.png");
-            $("#supply-type-name span").css("color", "#313131");
-            $("#supply-type-name img").attr("src", "images/lower@2x.png");
-            $("#supply-sort span").css("color", "#313131");
-            $("#supply-sort img").attr("src", "images/lower@2x.png");
+            $("#supply-city-name").addClass("sel-active").siblings().removeClass("sel-active");
             $(myDiv).parent().fadeIn(); //调用显示DIV方法
+            ++status;
             $(myDiv).parent().siblings(".menu-all").hide();
+            upOrDown();
             $(document).one("click", function () { //对document绑定一个影藏Div方法
                 $(myDiv).parent().hide();
-                $("#supply-city-name span").css("color", "#313131");
-                $("#supply-city-name img").attr("src", "images/lower@2x.png");
+                $("#supply-city-name").removeClass("sel-active");
+                upOrDown();
+                status = 1;
             });
-            $(this).one("click", function () {
+            if (status == 3) {
                 $(myDiv).parent().hide();
-                $("#supply-city-name span").css("color", "#313131");
-                $("#supply-city-name img").attr("src", "images/lower@2x.png");
-            });
+                $("#supply-city-name").removeClass("sel-active");
+                upOrDown();
+                status = 1;
+            }
+
             event.stopPropagation(); //阻止事件向上冒泡
         });
 
@@ -63,23 +57,16 @@ function supplyCtrl($scope) {
     $('.select-sort-menu').each(function () {
         var myDiv = $(this);
         $('#supply-sort').click(function (event) {
-            $("#supply-sort span").css("color", "#e98c06");
-            $("#supply-sort img").attr("src", "images/upper@2x.png");
-            $("#supply-type-name span").css("color", "#313131");
-            $("#supply-type-name img").attr("src", "images/lower@2x.png");
-            $("#supply-city-name span").css("color", "#313131");
-            $("#supply-city-name img").attr("src", "images/lower@2x.png");
+            $("#supply-sort").addClass("sel-active").siblings().removeClass("sel-active");
             $(myDiv).parent().fadeIn(); //调用显示DIV方法
             $(myDiv).parent().siblings(".menu-all").hide();
             $(document).one("click", function () { //对document绑定一个影藏Div方法
                 $(myDiv).parent().hide();
-                $("#supply-sort span").css("color", "#313131");
-                $("#supply-sort img").attr("src", "images/lower@2x.png");
+                $("#supply-sort").removeClass("sel-active");
             });
             $(this).one("click", function () {
                 $(myDiv).parent().hide();
-                $("#supply-sort span").css("color", "#313131");
-                $("#supply-sort img").attr("src", "images/lower@2x.png");
+                $("#supply-sort").removeClass("sel-active");
             });
             event.stopPropagation(); //阻止事件向上冒泡
         });
@@ -87,7 +74,18 @@ function supplyCtrl($scope) {
         $(myDiv).click(function (event) {
             event.stopPropagation(); //阻止事件向上冒泡
         });
+
     });
+
+    function upOrDown() {
+        if($("#supply-city-name").hasClass("sel-active")) {
+            $("#supply-city-name span").css("color", "#e98c06");
+            $("#supply-city-name img").attr("src", "images/upper@2x.png");
+        } else {
+            $("#supply-city-name span").css("color", "#313131");
+            $("#supply-city-name img").attr("src", "images/lower@2x.png");
+        }
+    }
 
     $(function(){
         $("ul#type-menu li").click(function(){
