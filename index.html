@@ -20,8 +20,8 @@
 <div class="bottom-nav">
     <div>
         <a id="bottom-home" ui-sref="homePage">
-            <img class="nav-icon" src="images/home1@2x.png"/>
-            <div class="nav-name" style="color: #e98c06;">首页</div>
+            <img class="nav-icon" src="images/home@2x.png"/>
+            <div class="nav-name">首页</div>
         </a>
     </div>
     <div>
@@ -63,7 +63,51 @@
     <script src="js/controllers/supplyCtrl.js"></script>
     <script src="js/controllers/buyCtrl.js"></script>
     <script>
+        var num = sessionStorage.getItem("tabNum");
+        num = parseInt(num);
+        if (isNaN(num)) {
+            num = 1;
+        }
+        switch (num) {
+            case 1:
+                $("#bottom-home").children("img").attr("src","images/home1@2x.png");
+                $("#bottom-home").children("div").css("color","#e98c06");
+                $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
+                $("#bottom-supply").children("div").css("color","#313131");
+                $("#bottom-buy").children("img").attr("src","images/purchase@2x.png");
+                $("#bottom-buy").children("div").css("color","#313131");
+                $("#bottom-shop").children("img").attr("src","images/Cart@2x.png");
+                $("#bottom-shop").children("div").css("color","#313131");
+                $("#bottom-mine").children("img").attr("src","images/user@2x.png");
+                $("#bottom-mine").children("div").css("color","#313131");
+                break;
+            case 2:
+                $("#bottom-home").children("img").attr("src","images/home@2x.png");
+                $("#bottom-home").children("div").css("color","#313131");
+                $("#bottom-supply").children("img").attr("src","images/Supply1@2x.png");
+                $("#bottom-supply").children("div").css("color","#e98c06");
+                $("#bottom-buy").children("img").attr("src","images/purchase@2x.png");
+                $("#bottom-buy").children("div").css("color","#313131");
+                $("#bottom-shop").children("img").attr("src","images/Cart@2x.png");
+                $("#bottom-shop").children("div").css("color","#313131");
+                $("#bottom-mine").children("img").attr("src","images/user@2x.png");
+                $("#bottom-mine").children("div").css("color","#313131");
+                break;
+            case 3:
+                $("#bottom-home").children("img").attr("src","images/home@2x.png");
+                $("#bottom-home").children("div").css("color","#313131");
+                $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
+                $("#bottom-supply").children("div").css("color","#313131");
+                $("#bottom-buy").children("img").attr("src","images/purchase1@2x_1.png");
+                $("#bottom-buy").children("div").css("color","#e98c06");
+                $("#bottom-shop").children("img").attr("src","images/Cart@2x.png");
+                $("#bottom-shop").children("div").css("color","#313131");
+                $("#bottom-mine").children("img").attr("src","images/user@2x.png");
+                $("#bottom-mine").children("div").css("color","#313131");
+                break;
+        }
         $("#bottom-home").click(function () {
+            sessionStorage.setItem("tabNum", "1");
             $("#bottom-home").children("img").attr("src","images/home1@2x.png");
             $("#bottom-home").children("div").css("color","#e98c06");
             $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
@@ -76,6 +120,7 @@
             $("#bottom-mine").children("div").css("color","#313131");
         });
         $("#bottom-supply").click(function () {
+            sessionStorage.setItem("tabNum", "2");
             $("#bottom-home").children("img").attr("src","images/home@2x.png");
             $("#bottom-home").children("div").css("color","#313131");
             $("#bottom-supply").children("img").attr("src","images/Supply1@2x.png");
@@ -88,6 +133,7 @@
             $("#bottom-mine").children("div").css("color","#313131");
         });
         $("#bottom-buy").click(function () {
+            sessionStorage.setItem("tabNum", "3");
             $("#bottom-home").children("img").attr("src","images/home@2x.png");
             $("#bottom-home").children("div").css("color","#313131");
             $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
@@ -100,7 +146,8 @@
             $("#bottom-mine").children("div").css("color","#313131");
         });
         $("#bottom-shop").click(function () {
-            $("#bottom-home").children("img").attr("src","images/home@2x.png");
+            alert("功能开发中");
+           /* $("#bottom-home").children("img").attr("src","images/home@2x.png");
             $("#bottom-home").children("div").css("color","#313131");
             $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
             $("#bottom-supply").children("div").css("color","#313131");
@@ -109,10 +156,11 @@
             $("#bottom-shop").children("img").attr("src","images/Cart1@2x.png");
             $("#bottom-shop").children("div").css("color","#e98c06");
             $("#bottom-mine").children("img").attr("src","images/user@2x.png");
-            $("#bottom-mine").children("div").css("color","#313131");
+            $("#bottom-mine").children("div").css("color","#313131");*/
         });
         $("#bottom-mine").click(function () {
-            $("#bottom-home").children("img").attr("src","images/home@2x.png");
+            alert("功能开发中");
+            /*$("#bottom-home").children("img").attr("src","images/home@2x.png");
             $("#bottom-home").children("div").css("color","#313131");
             $("#bottom-supply").children("img").attr("src","images/Supply@2x.png");
             $("#bottom-supply").children("div").css("color","#313131");
@@ -121,7 +169,7 @@
             $("#bottom-shop").children("img").attr("src","images/Cart@2x.png");
             $("#bottom-shop").children("div").css("color","#313131");
             $("#bottom-mine").children("img").attr("src","images/user1@2x.png");
-            $("#bottom-mine").children("div").css("color","#e98c06");
+            $("#bottom-mine").children("div").css("color","#e98c06");*/
         });
     </script>
 

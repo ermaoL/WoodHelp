@@ -11,32 +11,6 @@
     $("#publish-buy-content").css("overflow-x", "hidden");
 
     
-    // 发送验证码倒计时
-    var util = {
-        wait: 60,
-        hsTime: function (that) {
-            _this = $(this);
-            if (_this.wait == 0) {
-                $('#regis-valid').removeAttr("disabled").val('重发验证码');
-                $('#reset-valid').removeAttr("disabled").val('重发验证码');
-                _this.wait = 90;
-            } else {
-                var _this = this;
-                $(that).attr("disabled", true).val(_this.wait + '秒后重发');
-                _this.wait--;
-                setTimeout(function () {
-                    _this.hsTime(that);
-                }, 1000)
-            }
-        }
-    };
-
-    $("#regis-valid").click(function () {
-        util.hsTime('#regis-valid');
-    });
-    $("#reset-valid").click(function () {
-        util.hsTime('#reset-valid');
-    });
 
     // 求购价格选择的切换
     $("#phone-discuss").click(function () {
